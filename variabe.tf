@@ -47,10 +47,10 @@ variable "tags" {
   default     = {}
 }
 
-variable "ami" {
-  type        = string
-  description = "AMI ID for the launch template"
-}
+# variable "ami" {
+#   type        = string
+#   description = "AMI ID for the launch template"
+# }
 
 variable "keypair" {
   type        = string
@@ -79,4 +79,28 @@ variable "db-username" {
 
 variable "db-password" {
   type = string
+}
+
+
+variable "ami-bastion" {
+  type        = string
+  description = "AMI ID for the launch template"
+}
+
+
+variable "ami-web" {
+  type        = string
+  description = "AMI ID for the launch template"
+}
+
+
+variable "ami-nginx" {
+  type        = string
+  description = "AMI ID for the launch template"
+}
+
+
+variable "ami-sonar" {
+  type        = string
+  description = "AMI ID for the launch template"
 }
