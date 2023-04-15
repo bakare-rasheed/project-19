@@ -20,7 +20,7 @@ preferred_number_of_public_subnets = "2"
 preferred_number_of_private_subnets = "4"
 
 
-ami = "ami-09cd747c78a9add63"
+# ami = "ami-09cd747c78a9add63"
 
 keypair = "abiola"
 
