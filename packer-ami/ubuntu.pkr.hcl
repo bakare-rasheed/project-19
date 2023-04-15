@@ -1,7 +1,7 @@
-# variable "region" {
-#   type    = string
-#   default = "us-east-1"
-# }
+variable "region" {
+  type    = string
+  default = "us-east-1"
+}
 
 locals { timestamp = regex_replace(timestamp(), "[- TZ:]", "") }
 
@@ -23,12 +23,12 @@ source "amazon-ebs" "terraform-ubuntu-prj-19" {
   region        = var.region
   source_ami_filter {
     filters = {
-      name                = "ubuntu/images/*ubuntu-xenial-16.04-amd64-server-*"
+      name                = "ztna_ubuntu2004"
       root-device-type    = "ebs"
       virtualization-type = "hvm"
     }
     most_recent = true
-    owners      = ["805970402286"]
+    owners      = ["704109570831"]
   }
   ssh_username = "ubuntu"
   tag {

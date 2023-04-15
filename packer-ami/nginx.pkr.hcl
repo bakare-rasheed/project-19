@@ -1,7 +1,7 @@
-# variable "region" {
-#   type    = string
-#   default = "us-east-1"
-# }
+variable "region" {
+  type    = string
+  default = "us-east-1"
+}
 
 locals { timestamp = regex_replace(timestamp(), "[- TZ:]", "") }
 
@@ -15,12 +15,12 @@ source "amazon-ebs" "terraform-nginx-prj-19" {
   region        = var.region
   source_ami_filter {
     filters = {
-      name                = "RHEL-8.2_HVM-20200803-x86_64-0-Hourly2-GP2"
+      name                = "spotlight-rhel8-x64_ 2022-02-15T20-13-42.914Z"
       root-device-type    = "ebs"
       virtualization-type = "hvm"
     }
     most_recent = true
-    owners      = ["805970402286"]
+    owners      = ["281784684473"]
   }
   ssh_username = "ec2-user"
   tag {
